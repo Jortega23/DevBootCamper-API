@@ -1,0 +1,27 @@
+{
+  "name": "devbootcamper-api",
+  "version": "1.0.0",
+  "description": "Dev Bootcamper backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jortega23/DevBootCamper-API.git"
+  },
+  "author": "Jesus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jortega23/DevBootCamper-API/issues"
+  },
+  "homepage": "https://github.com/Jortega23/DevBootCamper-API#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

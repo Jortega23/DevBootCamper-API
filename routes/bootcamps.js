@@ -1,32 +1,14 @@
 const express = require('express')
+const {getBootcamps, getBootcamp, createBootcamp, updateBootcamp, deleteBootcamp} = require('../controllers/bootcamps')
+
 const router = express.Router()
 
 
-//Creating Routes----------------------------------------------------------------->
-// GET all bootcamps
-router.get('/', (req,res) => {
-  res.status(200).json({ success: true, msg: 'Show all bootcamps' });
-})
+//Set up routes that DONT NEED a :id
+router.route('/').get(getBootcamps).post(createBootcamp);
 
-// GET a single bootcamp
-router.get('/:id', (req,res) => {
-  res.status(200).json({ success: true, msg: 'show a specific bootcamp' });
-})
+//Set up routes that DO NEED a :id
+router.route('/:id').get(getBootcamp).put(updateBootcamp).delete(deleteBootcamp)
 
-// POST bootcamp
-router.post('/', (req,res) => {
-  res.status(200).json({ success: true, msg: 'Create New Bootcamp' });
-})
-
-// PUT (update) a bootcamp
-router.put('/:id', (req,res) => {
-  res.status(200).json({ success: true, msg: 'Update a bootcamp' });
-})
-
-// DELETE a bootcamp
-router.delete(':id', (req,res) => {
-  res.status(200).json({ success: true, msg: 'Delete a bootcamp' });
-})
-// ------------------------------------------------------------------------------>
 
 module.exports = router;

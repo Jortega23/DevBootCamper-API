@@ -49,3 +49,9 @@
   using MORGAN for middleware
   npm i morgan
   const morgan = require('morgan')
+
+
+# Database setup
+  MongoDB set up a cluster 
+  Setup database user 
+  Set up newtork ip address
